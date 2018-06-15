@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.passwordField.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func onLoginButtonClicked(_ sender: Any) {
+        if userNameField.text == "jaime" && passwordField.text == "12345" {
+            
+        }
+    }
+    
 }
 
